@@ -1,0 +1,8 @@
+Flask
+requests
+deep-translator
+gtts
+langdetect
+speechrecognition 
+pydub
+-q -U google-generativeai

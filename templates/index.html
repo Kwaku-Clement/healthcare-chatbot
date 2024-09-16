@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Advisor Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body class="light">
+    <div class="main-content">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <button id="close-sidebar-button" class="icon-button" aria-label="Close sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button id="new-conversation-button" class="primary-button">
+                    <i class="fas fa-plus"></i> New Conversation
+                </button>
+            </div>
+            <h2 class="sidebar-title">Conversations</h2>
+
+            <div id="conversation-list"></div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <header class="chat-header">
+                <button id="open-sidebar-button" class="icon-button" aria-label="Open sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <select id="language-select" class="language-select" aria-label="Select language">
+                    <option value="ak" selected>Twi</option>
+                    <option value="en">English</option>
+                </select>
+            </header>
+
+            <section id="chat-box" class="chat-box" aria-live="polite"></section>
+            <div id="error-message" class="error-message" aria-live="assertive"></div>
+            <div id="loading-indicator" class="loading-indicator" style="display: none">
+                <i class="fas fa-spinner fa-spin"></i> Generating response...
+            </div>
+            <footer class="chat-footer">
+                <form id="chat-form" class="chat-form">
+                    <input type="text" id="user-input" placeholder="Type your question here..." autocomplete="off" autofocus />
+                    <button id="microphone-button" type="button" class="icon-button" aria-label="Voice input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    </button>
+                    <button type="submit" class="icon-button" aria-label="Send message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <div class="disclaimer">
+                    <p><strong>Disclaimer:</strong> This chatbot is not a replacement for professional medical advice. Please consult a qualified healthcare professional for any medical concerns.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="static/js/scripts.js"></script>
+</body>
+</html>
